@@ -20,7 +20,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  ground = new Ground(400,580,800,20);
+  ground = new Ground(400,600,800,20);
 
 
   for(var i = 0; i <= width ; i = i+80){
@@ -43,10 +43,10 @@ console.log("division")
     plinkos.push(new Plinko(j,275));
    };
 
-   for(var j = 55; j <= width-10 ; j = j+50){
+   /*for(var j = 55; j <= width-10 ; j = j+50){
 
     plinkos.push(new Plinko(j,375));
-   };
+   };*/
 
 Engine.run(engine);
 
@@ -60,12 +60,12 @@ function draw() {
   drawSprites();
 
 
-  for(var n=0; n<=width; n++){
+  for(var n=0; n<=divisions.length-1; n++){
     divisions[n].display();
   }
 
-  if(frameCount % 60 === 0){
-    particles.push(new Particle(random(width/2-30,width/2+30),10,10));
+  if(frameCount % 20 === 0){
+    particles.push(new Particle(random(0,width),10,10));
   }
 
   for (var h =0; h<particles.length;h++){

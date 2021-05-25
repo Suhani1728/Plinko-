@@ -1,5 +1,5 @@
 class Division{
-    constuctor(x,y,w,h){
+    constructor(x,y,w,h){
 
         var options={
             isStatic:true

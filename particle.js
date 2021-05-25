@@ -1,10 +1,10 @@
 class Particle{
     constructor(x,y,r){
         var option={
-            restitution:0.4
+            restitution:0.6
         }
         this.r=r;
-        this.body=Bodies.circle(x,y,this.r,options);
+        this.body=Bodies.circle(x,y,this.r,option);
         this.color=color(random(0,255),random(0,255),random(0,255));
         World.add(world,this.body);
 
@@ -19,7 +19,7 @@ class Particle{
        rotate (angle)
        //imageMode(CENTER)
        noStroke();
-       fill("white")
+       fill(rgb(random(0,255),random(0,255),random(0,255)))
        ellipseMode(RADIUS)
        ellipse(0,0,this.r,this.r)
        pop ();
